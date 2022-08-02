@@ -12,6 +12,17 @@ body{
     color: white;
     transition: all .5s ease-in-out;
 }
+header{
+    height: 50vw;
+    color: white;
+    overflow: hidden;
+}
+
+.calibration .active-btn{
+    background-color: var(--color-secondary);
+    transition: all .5s ease-in-out;
+}
+
 .main-title{
     text-align: center;
     margin-top: 5rem;
@@ -33,7 +44,11 @@ body{
     grid-gap: 2rem;
     margin: 3rem;
 }
+.calibrations a{
+    text-decoration: none;
+}
 .calibrations .calibration{
+    cursor: pointer;
     position: relative;
     background-color: grey;
     border-radius: 5px;

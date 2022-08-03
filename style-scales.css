@@ -13,9 +13,13 @@ body{
     transition: all .5s ease-in-out;
 }
 header{
-    height: 50vw;
+    height: 60vw;
     color: white;
     overflow: hidden;
+}
+.scales-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 .main-title{
     text-align: center;
@@ -47,4 +51,188 @@ header{
     width: 3em;
     vertical-align: middle;
     margin: 0 0.5em;
+}
+
+/*/ thing list */
+.needs{
+    padding: 3rem;
+    color: black;
+}
+.needs h1{
+    margin-top: 3rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgb(0, 0, 180);
+}
+.needs .needs-list{
+    margin: auto;
+    padding: 3rem;
+}
+.needs .needs-list ul{
+    list-style: none;
+}
+.needs .needs-list ul li{
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.8;
+    width: 25vw;
+}
+.needs .needs-list ul li span{
+    cursor: pointer;
+}
+
+.hovering ul li img{
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    left: 42rem;
+    margin-top: -5rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: scale(0);
+    transition: all .5s ease-in-out;
+}
+.hovering ul li:hover{
+    color: rgb(0, 0, 180);
+}
+.hovering ul li:hover img{
+    opacity: 1;
+    transform: scale(1);
+}
+.hovering ul li:hover img:hover{
+    opacity: 0;
+    transform: scale(0);
+}
+
+.procedures{
+    list-style: circle;
+    color: black;
+}
+.procedures li{
+    margin-top: 2rem;
+    margin-left: 3rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.procedures li p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: justify;
+    margin-right: 5rem;
+}
+
+.right-scales{
+    display: grid;
+    grid-template-columns: repeat(2, .5fr);
+}
+.right-scales .about-scales{
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    margin-top: 10rem;
+    align-items: center;
+    background-color: rgb(102, 102, 250);
+    border-radius: 15px;
+    justify-content: center;
+}
+.right-scales .about-scales .about-scales-title{
+    font-size: 3rem;
+    font-weight: 600;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: rgb(0, 0, 180);
+    text-align: center;
+}
+.right-scales .about-scales .paragraph-scales{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: justify;
+    padding: 30px;
+}
+.right-scales .about-scales1{
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    right: 5%;
+    margin-top: 10rem;
+    align-items: center;
+    background-color: rgb(102, 102, 250);
+    border-radius: 15px;
+    justify-content: center;
+}
+.right-scales .about-scales1 .about-scales-title1{
+    font-size: 3rem;
+    font-weight: 600;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: rgb(0, 0, 180);
+    text-align: center;
+}
+.right-scales .about-scales1 .paragraph-scales1{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: justify;
+    padding: 30px;
+}
+
+.btn-con{
+    margin-top: 1000px;
+    padding-left: 50px;
+    display: flex;
+    align-self: flex-start;
+}
+.main-btn{
+    border-radius: 4rem;
+    color: inherit;
+    font-weight: 600;
+    position: relative;
+    border: 1px solid blue;
+    display: flex;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    right: -100%;
+}
+.btn-text{
+    padding: 0rem 3rem;
+    color: black;
+    font-size: 2rem;
+    font-weight: 600;
+    align-items: center;
+    text-decoration: none;
+    height: 3rem;
+    margin-right: -2rem;
+}
+.btn-icon{
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 3rem;
+    font-size: 2rem;
+}
+.main-btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: all .5s ease-out;
+    z-index: -1;
+}
+.main-btn:hover::before{
+    width: 100%;
+    height: 100%;
+    border-radius: 400px;
+    background-color: blue;
+    transform: translateX(0);
+}
+.main-btn:hover .btn-text{
+    text-decoration: none;
+    color: white;
 }

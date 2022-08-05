@@ -125,20 +125,20 @@ header{
 }
 
 .right-scales{
-    display: grid;
-    grid-template-columns: repeat(2, .5fr);
+    display: flex;
 }
-.right-scales .about-scales{
-    width: 500px;
-    height: 600px;
+.right-scales .img-container{
+    width: 1050px;
+    height: 700px;
     position: absolute;
     margin-top: 10rem;
+    padding-right: 0;
     align-items: center;
     background-color: rgb(102, 102, 250);
     border-radius: 15px;
     justify-content: center;
 }
-.right-scales .about-scales .about-scales-title{
+.right-scales .img-container .title-img{
     font-size: 3rem;
     font-weight: 600;
     border-radius: 15px;
@@ -146,36 +146,23 @@ header{
     background-color: rgb(0, 0, 180);
     text-align: center;
 }
-.right-scales .about-scales .paragraph-scales{
-    font-size: 2rem;
-    font-weight: 500;
-    text-align: justify;
-    padding: 30px;
+.right-scales .img-container .img-inside{
+
 }
-.right-scales .about-scales1{
-    width: 500px;
-    height: 600px;
+.right-scales .img-container .img-inside .imgscale{
     position: absolute;
-    right: 5%;
-    margin-top: 10rem;
-    align-items: center;
-    background-color: rgb(102, 102, 250);
-    border-radius: 15px;
-    justify-content: center;
+    width: 1001px;
+    height: 404.67px;
+    left: 20px;
+    top: 100px;
+
 }
-.right-scales .about-scales1 .about-scales-title1{
-    font-size: 3rem;
-    font-weight: 600;
-    border-radius: 15px;
-    padding: 15px;
-    background-color: rgb(0, 0, 180);
-    text-align: center;
-}
-.right-scales .about-scales1 .paragraph-scales1{
+.right-scales .img-container .paragraph-img{
     font-size: 2rem;
     font-weight: 500;
     text-align: justify;
     padding: 30px;
+    padding-top: 450px;
 }
 
 .btn-con{

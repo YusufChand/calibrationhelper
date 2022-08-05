@@ -129,7 +129,7 @@ header{
 }
 .right-scales .img-container{
     width: 1050px;
-    height: 700px;
+    height: 800px;
     position: absolute;
     margin-top: 10rem;
     padding-right: 0;
@@ -163,6 +163,19 @@ header{
     text-align: justify;
     padding: 30px;
     padding-top: 450px;
+}
+.right-scales .img-container .paragraph-img form{
+    padding-top: 15px;
+}
+.right-scales .img-container .paragraph-img form input{
+    height: 2rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 0 1rem;
+}
+.right-scales .img-container .paragraph-img form .input .submit{
+    padding: 1rem 0;
+    color: aquamarine;
 }
 
 .btn-con{

@@ -13,7 +13,7 @@ body{
     transition: all .5s ease-in-out;
 }
 header{
-    height: 60vw;
+    height: 70vw;
     color: white;
     overflow: hidden;
 }
@@ -129,7 +129,7 @@ header{
 }
 .right-scales .img-container{
     width: 1050px;
-    height: 800px;
+    height: 1000px;
     position: absolute;
     margin-top: 10rem;
     padding-right: 0;
@@ -164,22 +164,31 @@ header{
     padding: 30px;
     padding-top: 450px;
 }
-.right-scales .img-container .paragraph-img form{
-    padding-top: 15px;
+.right-scales .img-container .paragraph-img{
+    padding-top: 450px;
 }
-.right-scales .img-container .paragraph-img form input{
+.right-scales .img-container .paragraph-img input{
     height: 2rem;
     font-size: 1.5rem;
     border-radius: 10px;
     padding: 0 1rem;
 }
-.right-scales .img-container .paragraph-img form .input .submit{
-    padding: 1rem 0;
-    color: aquamarine;
+.right-scales .img-container .paragraph-img button{
+    padding: 0 1rem;
+    border-radius: 10px;
+    background-color: aquamarine;
+    font-size: 1.5rem;
+}
+.right-scales .img-container .paragraph-img .results{
+    display: none;
+    padding-top: 10px;
+    background-color: none;
+    border: none;
+    color: rgb(255, 42, 42);
 }
 
 .btn-con{
-    margin-top: 1000px;
+    margin-top: 1200px;
     padding-left: 50px;
     display: flex;
     align-self: flex-start;
@@ -190,9 +199,8 @@ header{
     font-weight: 600;
     position: relative;
     border: 1px solid blue;
-    display: flex;
+    display: none;
     align-self: flex-start;
-    display: flex;
     align-items: center;
     overflow: hidden;
     right: -100%;

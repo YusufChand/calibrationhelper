@@ -93,19 +93,34 @@
                     </div>
                     <div class="paragraph-img">
                         Please input your scale information below:
-                        <form action="scale_calibration1.html">
-                            <div class="max-capacity">Scale's Maximum Capacity</div>
-                            <input type="number" name="max-cap" id="max-cap" required> gr
+                        <div class="max-capacity">Scale's Maximum Capacity</div>
+                            <input type="number" name="maxcap" id="maxcap" required> gr
                             <br>
                             <div class="resolutions">Scale's Resolution</div>
                             <input type="number" name="resolution" id="resolution" required>
                             <br>
-                            <input type="submit" value="Submit" class="submit">
-                        </form>
+                            <button onclick="calc();">OK</button>
+                            <div class="results" id="results">*You'll need at least: <br>
+                                1 unit mass of <output id="result1"></output>gr<br>
+                                2 unit mass of <output id="result2"></output>gr<br>
+                                1 unit mass of <output id="result3"></output>gr<br>
+                                1 unit mass of <output id="result4"></output>gr<br>
+                            </div>
+                        <script>
+                            function calc(){
+                                document.getElementById("results").style.display = "block";
+                                var maxcap = parseInt(document.getElementById('maxcap').value);
+                                document.getElementById('result1').value = maxcap;
+                                document.getElementById('result2').value = (maxcap/2.5);
+                                document.getElementById('result3').value = maxcap/5;
+                                document.getElementById('result4').value = maxcap/10;
+                                document.getElementById("calibut").style.display = "flex";
+                            }
+                        </script>
                     </div>
                 </div>
                 <div class="btn-con">
-                    <a href="" class="main-btn">
+                    <a href="" class="main-btn" id="calibut">
                         <span class="btn-text">START CALIBRATING</span>
                         <span class="btn-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
                     </a>

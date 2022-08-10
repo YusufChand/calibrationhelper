@@ -173,6 +173,12 @@ header{
     border-radius: 10px;
     padding: 0 1rem;
 }
+.right-scales .img-container .paragraph-img select{
+    height: 2rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 0 1rem;
+}
 .right-scales .img-container .paragraph-img button{
     padding: 0 1rem;
     border-radius: 10px;
@@ -180,6 +186,20 @@ header{
     font-size: 1.5rem;
 }
 .right-scales .img-container .paragraph-img .results{
+    display: none;
+    padding-top: 10px;
+    background-color: none;
+    border: none;
+    color: rgb(255, 42, 42);
+}
+.right-scales .img-container .paragraph-img .wronginput{
+    display: none;
+    padding-top: 10px;
+    background-color: none;
+    border: none;
+    color: rgb(255, 42, 42);
+}
+.right-scales .img-container .paragraph-img .noinput{
     display: none;
     padding-top: 10px;
     background-color: none;

@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: white;
+    font-size: 1.1rem;
+    color: white;
+    transition: all .5s ease-in-out;
+}
+header{
+    height: 70vw;
+    color: white;
+    overflow: hidden;
+}
+.main-title{
+    text-align: center;
+    margin-top: 5rem;
+}
+.main-title h1{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+    color: black;
+}
+.main-title h1 span{
+    color: rgb(0, 0, 180);
+}
+.main-title .title-line{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: black;
+    display: block;
+}
+.title-line::before,
+.title-line::after{
+    content: "";
+    display: inline-block;
+    border-top: 1px solid #000;
+    width: 3em;
+    vertical-align: middle;
+    margin: 0 0.5em;
+}
+.parts{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+    margin-top: 3rem;
+}
+.parts .leftcali{
+    position: flex;
+    background-color: rgb(0, 0, 180);
+}
+.parts .rightcali{
+    padding: 2rem;
+}
+.parts .rightcali .instructions{
+    color: red;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.parts .rightcali .instructionpart{
+    text-align: justify;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+}
+.parts .rightcali .instructionpart input{
+    position: flex;
+    padding: 20px;
+    font-size: 1.8rem;
+}

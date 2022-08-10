@@ -97,9 +97,18 @@
                             <input type="number" name="maxcap" id="maxcap" required> gr
                             <br>
                             <div class="resolutions">Scale's Resolution</div>
-                            <input type="number" name="resolution" id="resolution" required>
+                            <select name="resolution" id="resolution">
+                                <option value="">-</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
                             <br>
                             <button onclick="calc();">OK</button>
+                            <div class="wronginput" id="wronginput">Please Input Valid Scale Information</div>
+                            <div class="noinput" id="noinput">Please Input Your Scale Information</div>
                             <div class="results" id="results">*You'll need at least: <br>
                                 1 unit mass of <output id="result1"></output>gr<br>
                                 2 unit mass of <output id="result2"></output>gr<br>
@@ -108,13 +117,36 @@
                             </div>
                         <script>
                             function calc(){
-                                document.getElementById("results").style.display = "block";
-                                var maxcap = parseInt(document.getElementById('maxcap').value);
-                                document.getElementById('result1').value = maxcap;
-                                document.getElementById('result2').value = (maxcap/2.5);
-                                document.getElementById('result3').value = maxcap/5;
-                                document.getElementById('result4').value = maxcap/10;
-                                document.getElementById("calibut").style.display = "flex";
+                                if((document.getElementById('resolution').value=="") && (document.getElementById('maxcap').value>=0)){
+                                    document.getElementById("wronginput").style.display = "none";
+                                    document.getElementById("results").style.display = "none";
+                                    document.getElementById("calibut").style.display = "none";
+                                    document.getElementById("noinput").style.display = "block";
+                                }
+                                else if(maxcap <=0 ){
+                                    document.getElementById("wronginput").style.display = "block";
+                                    document.getElementById("results").style.display = "none";
+                                    document.getElementById("calibut").style.display = "none";
+                                    document.getElementById("noinput").style.display = "none";
+                                }
+                                else if(document.getElementById('resolution').value=""){
+                                    document.getElementById("wronginput").style.display = "none";
+                                    document.getElementById("results").style.display = "none";
+                                    document.getElementById("calibut").style.display = "none";
+                                    document.getElementById("noinput").style.display = "block";
+                                } else {
+                                    var maxcap = parseInt(document.getElementById('maxcap').value);
+                                    document.getElementById('result1').value = maxcap;
+                                    document.getElementById('result2').value = (maxcap/2.5);
+                                    document.getElementById('result3').value = maxcap/5;
+                                    document.getElementById('result4').value = maxcap/10;
+                                    document.getElementById("calibut").style.display = "flex";
+                                    document.getElementById("results").style.display = "block";
+                                    document.getElementById("wronginput").style.display = "none";
+                                    document.getElementById("noinput").style.display = "none";
+                                }
+                                
+                                
                             }
                         </script>
                     </div>

@@ -19,23 +19,35 @@
         </div>
         <div class="parts">
             <div class="leftcali">
-                <img src="" alt="">
+                <div class="bcgleft"></div>
+                <div class="boxanim" id="anim1">
+                    <img src="image/Vektor/calipage/scale.png" id="scaleanim" class="scaleanim">
+                    <img src="image/Vektor/calipage/hand.png" id="handanim" class="handanim">
+                    <img src="image/Vektor/calipage/null.png" id="nullanim" class="nullanim">
+                    <img src="image/Vektor/calipage/null2.png" id="null2anim" class="null2anim">
+                </div>
             </div>
             <div class="rightcali">
                 <div class="instructions">
                     Follow along the instructions, tick along the instruction box to continue the calibration progress.
                 </div>
                 <div class="instructionpart">
-                    <input type="checkbox" class="ins1" id="ins1"> <span>Turns on your digitial scale and make sure the digital scale reading is at precisely 0.00 gram, if it wasn't please tare it. <br></span>
-                    <input type="checkbox" class="ins1" id="ins1"> Place your standard mass (M) of 500gr on top of the scale, and please input the scale's mass reading below (use "." as the decimal seperator): <br>
+                    <input type="checkbox" class="ins1" id="ins1" onclick="anim2();"> <span>Turns on your digitial scale and make sure the digital scale reading is at precisely 0.00 gram, if it wasn't please tare it. <br></span>
+                    <input type="checkbox" class="ins2" id="ins2"> Place your standard mass (M) of 500gr on top of the scale, and please input the scale's mass reading below (use "." as the decimal seperator): <br>
                     <input type="number" class="inpstdmass" id="inpstdmass"> <br>
-                    <input type="checkbox" class="ins1" id="ins1"> Slightly touch (pan) your finger on top of the standard mass that were on the scale for 30 seconds, then release your finger (use stopwach for this). <br>
-                    <input type="checkbox" class="ins1" id="ins1"> Please input your scale mass reading after the 30 seconds pan <br>
+                    <input type="checkbox" class="ins3" id="ins3"> Slightly touch (pan) your finger on top of the standard mass that were on the scale for 30 seconds, then release your finger (use stopwach for this). <br>
+                    <input type="checkbox" class="ins4" id="ins4"> Please input your scale mass reading after the 30 seconds pan <br>
                     <input type="number" class="inppanstd" id="inppanstd"> <br>
-                    <input type="checkbox" class="ins1" id="ins1"> Take away your mass on the scale, wait for about 5 seconds, please input your 0's scale reading (along with the decimal point) after removing the standard mass <br>
+                    <input type="checkbox" class="ins5" id="ins5"> Take away your mass on the scale, wait for about 5 seconds, please input your 0's scale reading (along with the decimal point) after removing the standard mass <br>
                     <input type="number" class="inppanzero" id="inppanzero"> <br>
                 </div>
             </div>
+            <script>
+                function anim2(){
+                    document.getElementById("anim1").style.display = "none";
+                    document.getElementById("anim2").style.display = "block";
+                }
+            </script>
         </div>
     </header>
 </body>

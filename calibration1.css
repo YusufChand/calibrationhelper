@@ -13,13 +13,14 @@ body{
     transition: all .5s ease-in-out;
 }
 header{
-    height: 70vw;
+    height: 80vw;
     color: white;
     overflow: hidden;
 }
 .main-title{
     text-align: center;
     margin-top: 5rem;
+    margin-left: 50%;
 }
 .main-title h1{
     position: relative;
@@ -56,8 +57,69 @@ header{
     margin-top: 3rem;
 }
 .parts .leftcali{
-    position: flex;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.parts .leftcali .bcgleft{
+    position: absolute;
+    margin-top: -15rem;
     background-color: rgb(0, 0, 180);
+    width: 45%;
+    height: 140%;
+    clip-path: polygon(0 0, 73% 0, 100% 100%, 0% 100%);
+}
+.parts .leftcali .boxanim{
+    position: absolute;
+    top: 30rem;
+    left: 20rem;
+    width: 600px;
+    height: 600px;
+    border-radius: 50px;
+    background-color: rgb(102, 102, 250);
+}
+.parts .leftcali .boxanim img{
+    position: absolute;
+}
+.parts .leftcali .boxanim .scaleanim{
+    left: 30px;
+    top: 35px;
+}
+.parts .leftcali .boxanim .nullanim{
+    left: 236.9px;
+    top: 279.6px;
+    animation-name: animate-pop;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.parts .leftcali .boxanim .null2anim{
+    left: 236.9px;
+    top: 279.6px;
+    animation-name: animate-fade;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.parts .leftcali .boxanim .handanim{
+    left: 63px;
+    top: 233.41px;
+    animation-name: drive;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+@keyframes drive{
+    from{ transform: translateX(-100px);}
+    to {transform: translateX(0);}
+}
+@keyframes animate-fade{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@keyframes animate-pop{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
 .parts .rightcali{
     padding: 2rem;
@@ -83,3 +145,4 @@ header{
     padding: 20px;
     font-size: 1.8rem;
 }
+

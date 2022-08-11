@@ -13,7 +13,7 @@ body{
     transition: all .5s ease-in-out;
 }
 header{
-    height: 80vw;
+    height: 70vw;
     color: white;
     overflow: hidden;
 }
@@ -182,6 +182,136 @@ header{
 }
 
 /* Anim3 */
+.parts .leftcali .boxanim3{
+    position: absolute;
+    display: none;
+    top: 30rem;
+    left: 20rem;
+    width: 600px;
+    height: 600px;
+    border-radius: 50px;
+    background-color: rgb(102, 102, 250);
+}
+.parts .leftcali .boxanim3 img{
+    position: absolute;
+}
+.parts .leftcali .boxanim3 .stdm3{
+    z-index: 1;
+    left: 253px;
+    top: 120px;
+}
+.parts .leftcali .boxanim3 .scale3{
+    left: 30px;
+    top: 137.2px;
+}
+.parts .leftcali .boxanim3 .five3{
+    left: 187px;
+    top: 370px;
+}
+.parts .leftcali .boxanim3 .hand3{
+    left: -70px;
+    top: -10px;
+    z-index: 2;
+    animation-name: animate-pop;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+/*anim 4*/
+.parts .leftcali .boxanim4{
+    position: absolute;
+    display: none;
+    top: 30rem;
+    left: 20rem;
+    width: 600px;
+    height: 600px;
+    border-radius: 50px;
+    background-color: rgb(102, 102, 250);
+}
+.parts .leftcali .boxanim4 img{
+    max-width: 80%;
+    max-height: 80%;
+    position: absolute;
+}
+.parts .leftcali .boxanim4 .scale4{
+    top: 15px;
+    left: 15px;
+}
+.parts .leftcali .boxanim4 .num4{
+    top: 350px;
+    left: 220px;
+    animation-name: animate-pop;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.parts .leftcali .boxanim4 .after30{
+    top: 470px;
+    left: 110px;
+}
+
+/*anim5*/
+.parts .leftcali .boxanim5{
+    position: absolute;
+    display: none;
+    top: 30rem;
+    left: 20rem;
+    width: 600px;
+    height: 600px;
+    border-radius: 50px;
+    background-color: rgb(102, 102, 250);
+}
+.parts .leftcali .boxanim5 img{
+    position: absolute;
+    max-width: 65%;
+    max-height: 65%;
+}
+.parts .leftcali .boxanim5 .stdm5{
+    top: 10px;
+    left: 240px;
+    animation-name: drive3;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.parts .leftcali .boxanim5 .scale5{
+    top: 62.2px;
+    left: 70px;
+}
+.parts .leftcali .boxanim5 .zero5{
+    top: 230px;
+    left: 195.45px;
+    max-width: 65%;
+    max-height: 65%;
+    animation-name: animate-pop;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.parts .leftcali .boxanim5 .five5{
+    top: 225px;
+    left: 150.45px;
+    z-index: 1;
+    max-width: 65%;
+    max-height: 65%;
+    animation-name: animate-fade;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.parts .leftcali .boxanim5 .read5{
+    top: 400px;
+    left: 120px;
+}
+@keyframes drive3{
+    from{ transform: translateX(0px);}
+    to {transform: translateX(-300px);}
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+
 
 
 

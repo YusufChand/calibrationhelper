@@ -69,6 +69,10 @@ header{
     height: 140%;
     clip-path: polygon(0 0, 73% 0, 100% 100%, 0% 100%);
 }
+
+
+/* Animation CSS */
+/* anim1 */
 .parts .leftcali .boxanim{
     position: absolute;
     top: 30rem;
@@ -121,6 +125,67 @@ header{
     0%{opacity: 0;}
     100%{opacity: 1;}
 }
+/*anim2*/
+.parts .leftcali .boxanim2{
+    position: absolute;
+    display: none;
+    top: 30rem;
+    left: 20rem;
+    width: 600px;
+    height: 600px;
+    border-radius: 50px;
+    background-color: rgb(102, 102, 250);
+}
+.parts .leftcali .boxanim2 img{
+    position: absolute;
+}
+.parts .leftcali .boxanim2 .stdm{
+    z-index: 1;
+    left: 253px;
+    top: 60px;
+    animation-name: drive2;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.parts .leftcali .boxanim2 .scale2{
+    left: 30px;
+    top: 77.2px;
+}
+.parts .leftcali .boxanim2 .null2{
+    left: 237px;
+    top: 320px;
+    animation-name: animate-fade;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.parts .leftcali .boxanim2 .fivem{
+    left: 187px;
+    top: 310px;
+    animation-name: animate-pop;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.parts .leftcali .boxanim2 .read{
+    left: 80px;
+    top: 500px;
+    animation-name: animate-pop;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+@keyframes drive2{
+    from{ transform: translateY(-100px);}
+    to {transform: translateY(0);}
+}
+
+/* Anim3 */
+
+
+
+
 .parts .rightcali{
     padding: 2rem;
 }
@@ -134,15 +199,37 @@ header{
     text-align: justify;
     padding-right: 1rem;
     padding-top: 1rem;
-    padding-left: 1rem;
-    line-height: 4rem;
+    line-height: 2rem;
     font-size: 2rem;
     font-weight: 600;
     color: black;
-}
-.parts .rightcali .instructionpart input{
     position: flex;
-    padding: 20px;
     font-size: 1.8rem;
 }
+.parts .rightcali .instructionpart .ins2{
+    display: none;
+}
+.parts .rightcali .instructionpart .ins3{
+    display: none;
+}
+.parts .rightcali .instructionpart .ins3 .timer{
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+}
+.parts .rightcali .instructionpart .ins3 .timer .timeblock{
+    width: 600px;
+    height: 1.5rem;
+    margin-top: 10px;
+    border: solid 1px black;
+    border-radius: 15px;
+}
+
+
+.parts .rightcali .instructionpart .ins4{
+    display: none;
+}
+.parts .rightcali .instructionpart .ins5{
+    display: none;
+}
+
 

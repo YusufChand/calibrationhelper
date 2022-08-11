@@ -26,26 +26,71 @@
                     <img src="image/Vektor/calipage/null.png" id="nullanim" class="nullanim">
                     <img src="image/Vektor/calipage/null2.png" id="null2anim" class="null2anim">
                 </div>
+                <div class="boxanim2" id="anim2">
+                    <img src="image/Vektor/anim2/standard.png" id="stdm" class="stdm">
+                    <img src="image/Vektor/anim2/scale.png" id="scale2" class="scale2">
+                    <img src="image/Vektor/anim2/null.png" id="null2" class="null2">
+                    <img src="image/Vektor/anim2/500.png" id="fivem" class="fivem">
+                    <img src="image/Vektor/anim2/reading.png" id="read" class="read">
+                </div>
             </div>
             <div class="rightcali">
                 <div class="instructions">
                     Follow along the instructions, tick along the instruction box to continue the calibration progress.
                 </div>
                 <div class="instructionpart">
-                    <input type="checkbox" class="ins1" id="ins1" onclick="anim2();"> <span>Turns on your digitial scale and make sure the digital scale reading is at precisely 0.00 gram, if it wasn't please tare it. <br></span>
-                    <input type="checkbox" class="ins2" id="ins2"> Place your standard mass (M) of 500gr on top of the scale, and please input the scale's mass reading below (use "." as the decimal seperator): <br>
-                    <input type="number" class="inpstdmass" id="inpstdmass"> <br>
-                    <input type="checkbox" class="ins3" id="ins3"> Slightly touch (pan) your finger on top of the standard mass that were on the scale for 30 seconds, then release your finger (use stopwach for this). <br>
-                    <input type="checkbox" class="ins4" id="ins4"> Please input your scale mass reading after the 30 seconds pan <br>
-                    <input type="number" class="inppanstd" id="inppanstd"> <br>
-                    <input type="checkbox" class="ins5" id="ins5"> Take away your mass on the scale, wait for about 5 seconds, please input your 0's scale reading (along with the decimal point) after removing the standard mass <br>
-                    <input type="number" class="inppanzero" id="inppanzero"> <br>
+                    <div class="ins1" id="ins1">Turns on your digitial scale and make sure the digital scale reading is at precisely 0.00 gram, if it wasn't please tare it. 
+                        <br><button class="next1" id="next1" onclick="anim2();">NEXT</button><br>
+                    </div>
+                    <div class="ins2" id="ins2">Place your standard mass (M) of 500gr on top of the scale, and please input the scale's mass reading below (use "." as the decimal seperator):
+                        <br><input type="number" class="inp1" id="inp1"><br>
+                        <button class="pre2" id="pre2" onclick="anim1();">PREVIOUS</button><button class="next2" id="next2" onclick="anim3();">NEXT</button><br>
+                    </div>
+                    <div class="ins3" id="ins3">Slightly touch (pan) your finger on top of the standard mass that were on the scale for 30 seconds, then release your finger (use stopwach for this).
+                        <br><div class="timer">
+                            <div class="stratbutton">
+                                <div class="startbut"><button class="starttime" id="starttime" onclick="timer();"><i class="fa-solid fa-play"></i></button>
+                                    <div class="timeblock" id="timeblock"></div>
+                                </div>
+                            </div>
+                        </div><br>
+                        <button class="pre3" id="pre3" onclick="anim2();">PREVIOUS</button><button class="next3" id="next3" onclick="anim4();">NEXT</button><br>
+                    </div>
+                    <div class="ins4" id="ins4">Please input your scale mass reading after the 30 seconds pan
+                        <br><input type="number" class="inp2" id="inp2"><br>
+                        <br><button class="pre4" id="pre4">PREVIOUS</button><button class="next4" id="next4">NEXT</button><br>
+                    </div>
+                    <div class="ins5" id="ins5">Take away your mass on the scale, wait for about 5 seconds, please input your 0's scale reading (along with the decimal point) after removing the standard mass:
+                        <br><input type="number" class="inp3" id="inp3"><br>
+                        <br><button class="pre5" id="pre5">PREVIOUS</button><button class="next5" id="next5">NEXT</button><br>
+                    </div>
                 </div>
             </div>
             <script>
+                function timer(){
+
+                }
+                function anim1(){
+                    document.getElementById('next1').style.display="block";
+                    document.getElementById('ins2').style.display="none";
+                    document.getElementById('anim1').style.display="block";
+                    document.getElementById('anim2').style.display="none"; 
+                }
                 function anim2(){
-                    document.getElementById("anim1").style.display = "none";
-                    document.getElementById("anim2").style.display = "block";
+                    document.getElementById('next1').style.display="none";
+                    document.getElementById('next2').style.display="block";
+                    document.getElementById('pre2').style.display="block";
+                    document.getElementById('ins2').style.display="block";
+                    document.getElementById('ins3').style.display="none";
+                    document.getElementById('anim1').style.display="none";
+                    document.getElementById('anim2').style.display="block";
+                }
+                function anim3(){
+                    document.getElementById('next2').style.display="none";
+                    document.getElementById('pre2').style.display="none";
+                    document.getElementById('ins3').style.display="block";
+                    document.getElementById('anim2').style.display="none";
+                    document.getElementById('anim3').style.display="block";
                 }
             </script>
         </div>

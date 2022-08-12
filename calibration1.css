@@ -69,6 +69,13 @@ header{
     height: 140%;
     clip-path: polygon(0 0, 73% 0, 100% 100%, 0% 100%);
 }
+.parts .leftcali .notice{
+    position: absolute;
+    z-index: 1;
+    top: 68rem;
+    left: 22rem;
+    font-size: 1.25rem;
+}
 
 
 /* Animation CSS */
@@ -336,30 +343,177 @@ header{
     position: flex;
     font-size: 1.8rem;
 }
+.parts .rightcali .instructionpart .ins1 button{
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: white;
+    background-color: rgb(0, 0, 180);
+    margin-top: 1rem;
+}
 .parts .rightcali .instructionpart .ins2{
     display: none;
 }
+.parts .rightcali .instructionpart .ins2 .inp1{
+    font-size: 1.5rem;
+    padding: 5px;
+    border-radius: 15px;
+    margin-top: 0.5rem;
+}
+.parts .rightcali .instructionpart .ins2 .warn2{
+    display: none;
+    font-size: 1.5rem;
+    color: red;
+    margin-top: 0.3rem;
+}
+.parts .rightcali .instructionpart .ins2 .butcon2 .next2{
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: white;
+    background-color: rgb(0, 0, 180);
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.parts .rightcali .instructionpart .ins3 .butcon3 .next3{
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: white;
+    background-color: rgb(0, 0, 180);
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.parts .rightcali .instructionpart .ins4 .butcon4 .next4{
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: white;
+    background-color: rgb(0, 0, 180);
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.parts .rightcali .instructionpart .ins5 .butcon5 .next5{
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: white;
+    background-color: rgb(0, 0, 180);
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.parts .rightcali .instructionpart .ins2 .butcon2 .pre2{
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: white;
+    background-color: rgb(102, 102, 250);
+    margin-top: 1rem;
+}
+.parts .rightcali .instructionpart .ins3 .butcon3 .pre3{
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: white;
+    background-color: rgb(102, 102, 250);
+    margin-top: 1rem;
+}
+.parts .rightcali .instructionpart .ins4 .butcon4 .pre4{
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: white;
+    background-color: rgb(102, 102, 250);
+    margin-top: 1rem;
+}
+.parts .rightcali .instructionpart .ins5 .butcon5 .pre5{
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: white;
+    background-color: rgb(102, 102, 250);
+    margin-top: 1rem;
+}
+
 .parts .rightcali .instructionpart .ins3{
     display: none;
 }
-.parts .rightcali .instructionpart .ins3 .timer{
-    display: grid;
-    grid-template-columns: repeat(3, 40px);
+.parts .rightcali .instructionpart .ins3 .timer button{
+    font-size: .8rem;
+    padding: 7px 10px;
+    border-radius: 10px;
+    margin-top: 0.5rem;
 }
 .parts .rightcali .instructionpart .ins3 .timer .timeblock{
     width: 600px;
     height: 1.5rem;
     margin-top: 10px;
-    border: solid 1px black;
+    border: solid 3px black;
     border-radius: 15px;
+    background-color: rgba(170, 170, 170, 0.6);
+    display: flex;
+    align-self: flex-start;
+    overflow: hidden;
 }
+.parts .rightcali .instructionpart .ins3 .timer .timeblock{
+    animation-name: timer;
+    animation-duration: 30s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    z-index: -1;
+}
+
+@keyframes timer{
+    from {
+        transform: translateX(-100%);
+        transition-timing-function: linear;
+        content: '';
+        position: flex;
+        top: 0;
+        right: 0;
+    }
+    to {
+        transform: translateX(0);
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 180);
+    }
+}
+
 
 
 .parts .rightcali .instructionpart .ins4{
     display: none;
 }
+.parts .rightcali .instructionpart .ins4 .inp2{
+    font-size: 1.5rem;
+    padding: 5px;
+    border-radius: 15px;
+    margin-top: 0.5rem;
+}
+.parts .rightcali .instructionpart .ins4 .warn4{
+    display: none;
+    font-size: 1.5rem;
+    color: red;
+    margin-top: 0.3rem;
+}
 .parts .rightcali .instructionpart .ins5{
     display: none;
+}
+.parts .rightcali .instructionpart .ins5 .inp3{
+    font-size: 1.5rem;
+    padding: 5px;
+    border-radius: 15px;
+    margin-top: 0.5rem;
 }
 
 

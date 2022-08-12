@@ -51,6 +51,7 @@
                     <img src="image/Vektor/anim5/reading.png" class="read5" id="read5">
                     <img src="image/Vektor/anim5/stdm.png" class="stdm5" id="stdm5">
                 </div>
+                <div class="notice">*this is only an example, please use the mass as instruct</div>
             </div>
             <div class="rightcali">
                 <div class="instructions">
@@ -62,25 +63,32 @@
                     </div>
                     <div class="ins2" id="ins2">Place your standard mass (M) of 500gr on top of the scale, and please input the scale's mass reading below (use "." as the decimal seperator):
                         <br><input type="number" class="inp1" id="inp1"><br>
-                        <div id="butcon2"><button class="pre2" id="pre2" onclick="anim1();">PREVIOUS</button><button class="next2" id="next2" onclick="anim3();">NEXT</button></div><br>
+                        <div id="butcon2" class="butcon2"><button class="pre2" id="pre2" onclick="anim1();">PREVIOUS</button><button class="next2" id="next2" onclick="anim3();">NEXT</button></div>
+                        <div class="warn2" id="warn2">Please input your scale reading first!</div> <br>
                     </div>
                     <div class="ins3" id="ins3">Slightly touch (pan) your finger on top of the standard mass that were on the scale for 30 seconds, then release your finger (use stopwach for this).
                         <br><div class="timer">
                             <div class="stratbutton">
-                                <div class="startbut"><button class="starttime" id="starttime" onclick="timer();"><i class="fa-solid fa-play"></i></button>
-                                    <div class="timeblock" id="timeblock"></div>
+                                <div class="startbut">
+                                    <button class="starttime" id="starttime" onclick="timer();"><i class="fa-solid fa-play"></i></button>
+                                    <button class="pausetime" id="pausetime"><i class="fa-solid fa-pause"></i></button>
+                                    <button class="restarttime" id="restarttime"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+                                    <div class="timeblock" id="timeblock">
+                                        <div class="moveon" id="moveon"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="butcon3"><button class="pre3" id="pre3" onclick="anim2();">PREVIOUS</button><button class="next3" id="next3" onclick="anim4();">NEXT</button></div><br>
+                        <div id="butcon3" class="butcon3"><button class="pre3" id="pre3" onclick="anim2();">PREVIOUS</button><button class="next3" id="next3" onclick="anim4();">NEXT</button></div><br>
                     </div>
                     <div class="ins4" id="ins4">Please input your scale mass reading after the 30 seconds pan
                         <br><input type="number" class="inp2" id="inp2"><br>
-                        <div id="butcon4"><button class="pre4" id="pre4" onclick="anim3();">PREVIOUS</button><button class="next4" id="next4" onclick="anim5();">NEXT</button></div><br>
+                        <div id="butcon4" class="butcon4"><button class="pre4" id="pre4" onclick="anim3();">PREVIOUS</button><button class="next4" id="next4" onclick="anim5();">NEXT</button></div>
+                        <div class="warn4" id="warn4">Please input your scale reading first!</div> <br>
                     </div>
                     <div class="ins5" id="ins5">Take away your mass on the scale, wait for about 5 seconds, please input your 0's scale reading (along with the decimal point) after removing the standard mass:
                         <br><input type="number" class="inp3" id="inp3"><br>
-                        <div id="butcon5"><button class="pre5" id="pre5" onclick="anim4();">PREVIOUS</button><button class="next5" id="next5" onclick="nextcali();">NEXT</button></div><br>
+                        <div id="butcon5" class="butcon5"><button class="pre5" id="pre5" onclick="anim4();">PREVIOUS</button><button class="next5" id="next5" onclick="nextcali();">NEXT</button></div><br>
                     </div>
                 </div>
             </div>
@@ -102,15 +110,22 @@
                     document.getElementById('anim2').style.display="block";
                     document.getElementById('anim3').style.display="none";
                     document.getElementById('butcon2').style.display="block";
+                    document.getElementById('warn2').style.display="none";
                 }
                 function anim3(){
-                    document.getElementById('butcon2').style.display="none";
-                    document.getElementById('ins3').style.display="block";
-                    document.getElementById('anim2').style.display="none";
-                    document.getElementById('anim3').style.display="block";
-                    document.getElementById('anim4').style.display="none";
-                    document.getElementById('ins4').style.display="none";
-                    document.getElementById('butcon3').style.display="block";
+                    if (document.getElementById('inp1').value==""){
+                        document.getElementById('warn2').style.display="block";
+                    }
+                    else{
+                        document.getElementById('butcon2').style.display="none";
+                        document.getElementById('ins3').style.display="block";
+                        document.getElementById('anim2').style.display="none";
+                        document.getElementById('anim3').style.display="block";
+                        document.getElementById('anim4').style.display="none";
+                        document.getElementById('ins4').style.display="none";
+                        document.getElementById('butcon3').style.display="block";
+                        document.getElementById('warn2').style.display="none";
+                    }
                 }
                 function anim4(){
                     document.getElementById('butcon3').style.display="none";
@@ -121,14 +136,20 @@
                     document.getElementById('anim3').style.display="none";
                     document.getElementById('anim4').style.display="block";
                     document.getElementById('anim5').style.display="none";
+                    document.getElementById('warn4').style.display="none";
                 }
                 function anim5(){
-                    document.getElementById('butcon4').style.display="none";
-                    document.getElementById('ins5').style.display="block";
-                    document.getElementById('anim2').style.display="none";
-                    document.getElementById('anim3').style.display="none";
-                    document.getElementById('anim4').style.display="none";
-                    document.getElementById('anim5').style.display="block";
+                    if (document.getElementById('inp2').value==''){
+                        document.getElementById('warn4').style.display="block";
+                    }
+                    else{
+                        document.getElementById('butcon4').style.display="none";
+                        document.getElementById('ins5').style.display="block";
+                        document.getElementById('anim2').style.display="none";
+                        document.getElementById('anim3').style.display="none";
+                        document.getElementById('anim4').style.display="none";
+                        document.getElementById('anim5').style.display="block";
+                    }
                 }
                 function nextxcali(){
                     document.getElementById('next5').style.display="none";

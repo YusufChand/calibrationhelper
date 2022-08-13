@@ -67,7 +67,7 @@
                         <div class="warn2" id="warn2">Please input your scale reading first!</div> <br>
                     </div>
                     <div class="ins3" id="ins3">Slightly touch (pan) your finger on top of the standard mass that were on the scale for 30 seconds, then release your finger (use stopwach for this).
-                        <br><div class="timer">
+                        <br><div class="timer" id="timer">
                             <div class="timerbutton">
                                 <button type="button" class="starttime" id="starttime" onclick="timer();">
                                     <span><i class="fa-solid fa-play"></i></span>
@@ -75,7 +75,7 @@
                                 <button type="button" class="pausetime" id="pausetime" onclick="pause();">
                                     <span><i class="fa-solid fa-pause"></i></span>
                                 </button>
-                                <button type="button" class="restarttime" id="restarttime">
+                                <button type="button" class="restarttime" id="restarttime" onclick="reset();">
                                     <span><i class="fa-solid fa-arrow-rotate-left"></i></span>
                                 </button>
                             </div>
@@ -95,16 +95,38 @@
                 </div>
             </div>
             <script>
-                var timer;
-                var ele = document.getElementById('seconds');
+                var output = document.getElementById("seconds");
+                var time = 0;
+                var t = setInterval(function() {
+                 if(!isPaused) {
+                     if(!sim30){
+                        output.innerText = "29" - time;
+                        time++;
+                     }
+                     else if (sim30=true){
+                        output.innerText = "29";
+                     }
+                    }
+                }, 1000);
                 function timer(){
-                    var sec=0;
-                    timer = setInterval(()=>{
-                        ele.innerHTML='29'-sec;
-                        sec ++;
-                    }, 1000)
+                    isPaused = false;
+                    sim30=false;
                     document.getElementById('starttime').style.display="none";
                     document.getElementById('pausetime').style.display="inline-block";
+                }
+                function pause(){
+                    isPaused = true;
+                    sim30=false;
+                    document.getElementById('starttime').style.display="inline-block";
+                    document.getElementById('pausetime').style.display="none";
+                }
+                function reset(){
+                    time=0;
+                    sim30=true;
+                    isPaused=true;
+                    output.innerText="30"
+                    document.getElementById('starttime').style.display="inline-block";
+                    document.getElementById('pausetime').style.display="none";
                 }
                 function anim1(){
                     document.getElementById('next1').style.display="block";
@@ -135,6 +157,7 @@
                         document.getElementById('ins4').style.display="none";
                         document.getElementById('butcon3').style.display="block";
                         document.getElementById('warn2').style.display="none";
+                        document.getElementById('timer').style.display="inline-block";
                     }
                 }
                 function anim4(){
@@ -147,6 +170,7 @@
                     document.getElementById('anim4').style.display="block";
                     document.getElementById('anim5').style.display="none";
                     document.getElementById('warn4').style.display="none";
+                    document.getElementById('timer').style.display="none";
                 }
                 function anim5(){
                     if (document.getElementById('inp2').value==''){
@@ -159,6 +183,7 @@
                         document.getElementById('anim3').style.display="none";
                         document.getElementById('anim4').style.display="none";
                         document.getElementById('anim5').style.display="block";
+                        document.getElementById('warn4').style.display="none";
                     }
                 }
                 function nextxcali(){

@@ -68,16 +68,18 @@
                     </div>
                     <div class="ins3" id="ins3">Slightly touch (pan) your finger on top of the standard mass that were on the scale for 30 seconds, then release your finger (use stopwach for this).
                         <br><div class="timer">
-                            <div class="stratbutton">
-                                <div class="startbut">
-                                    <button class="starttime" id="starttime" onclick="timer();"><i class="fa-solid fa-play"></i></button>
-                                    <button class="pausetime" id="pausetime"><i class="fa-solid fa-pause"></i></button>
-                                    <button class="restarttime" id="restarttime"><i class="fa-solid fa-arrow-rotate-left"></i></button>
-                                    <div class="timeblock" id="timeblock">
-                                        <div class="moveon" id="moveon"></div>
-                                    </div>
-                                </div>
+                            <div class="timerbutton">
+                                <button type="button" class="starttime" id="starttime" onclick="timer();">
+                                    <span><i class="fa-solid fa-play"></i></span>
+                                </button>
+                                <button type="button" class="pausetime" id="pausetime" onclick="pause();">
+                                    <span><i class="fa-solid fa-pause"></i></span>
+                                </button>
+                                <button type="button" class="restarttime" id="restarttime">
+                                    <span><i class="fa-solid fa-arrow-rotate-left"></i></span>
+                                </button>
                             </div>
+                            <span class="seconds" id="seconds">30</span>
                         </div>
                         <div id="butcon3" class="butcon3"><button class="pre3" id="pre3" onclick="anim2();">PREVIOUS</button><button class="next3" id="next3" onclick="anim4();">NEXT</button></div><br>
                     </div>
@@ -93,8 +95,16 @@
                 </div>
             </div>
             <script>
+                var timer;
+                var ele = document.getElementById('seconds');
                 function timer(){
-
+                    var sec=0;
+                    timer = setInterval(()=>{
+                        ele.innerHTML='29'-sec;
+                        sec ++;
+                    }, 1000)
+                    document.getElementById('starttime').style.display="none";
+                    document.getElementById('pausetime').style.display="inline-block";
                 }
                 function anim1(){
                     document.getElementById('next1').style.display="block";
